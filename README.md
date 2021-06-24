@@ -56,7 +56,7 @@ This is necessary for some programs like ImageMagick to order a sequence of imag
 
     node drop-duplicates <path-to-timelapse-files>
 
-Runs through the files in sequence, checking where file i+1 is an exact copy of i, when i+1 is then discarded.
+Runs through the files in sequence, checking where file i+1 is an exact copy of i, when i+1 is then discarded. Needs files to be prefixed with zeros, otherwise they will be incorrectly sorted.
 
 ## fix-holes.js
 
@@ -65,6 +65,8 @@ Runs through the files in sequence, checking where file i+1 is an exact copy of 
 This script will renumber files in the sequence to fix any eventual holes. It will preserve any existing zero-padding.
 
 If the number of holes removed allows for a reduction in the padding of the sequence, the script will perform the reduction. For instance, the last image was sequenced as `1345`, but it is now `0876`, the leading zero can be dropped in all images.
+
+Warning: it needs files to be prefixed with zeros, otherwise they will be incorrectly sorted!
 
 ## remove-padding.js
 
@@ -82,4 +84,10 @@ This is so the animation holds the last frame for longer. Aseprite is able to ad
 
     node cover <path-to-timelapse-files>
 
-This scripts copies the last frame to the first one, moving all other frames one sequence up to accommodate for that.
+This scripts copies the last frame to the first one, moving all other frames one sequence up to accommodate for that. Needs files to be prefixed with zeros, otherwise they will be incorrectly sorted.
+
+## elapsed.js
+
+    node elapsed <path-to-timelapse-files>
+
+Calculates how much time was spent doing the art. Needs files to be prefixed with zeros, otherwise they will be incorrectly sorted.

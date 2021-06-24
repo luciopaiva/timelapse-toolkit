@@ -1,12 +1,24 @@
 {
   "name": "rename-file-sequence",
   "version": "1.0.0",
-  "description": "",
+  "description": "Collection of scripts to help turn a sequence of images into an animation.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luciopaiva/timelapse-toolkit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/luciopaiva/timelapse-toolkit/issues"
+  },
+  "homepage": "https://github.com/luciopaiva/timelapse-toolkit#readme"
 }
