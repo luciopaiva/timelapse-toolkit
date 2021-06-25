@@ -91,3 +91,9 @@ This scripts copies the last frame to the first one, moving all other frames one
     node elapsed <path-to-timelapse-files>
 
 Calculates how much time was spent doing the art. Needs files to be prefixed with zeros, otherwise they will be incorrectly sorted.
+
+## one-every.js
+
+    node elapsed <path-to-timelapse-files> <x>
+
+Sometimes you just have too many snapshots. This script allows you to keep one out of every `x` snapshots. Files will be deleted, holes need to be fixed with `fix-holes.js`.
