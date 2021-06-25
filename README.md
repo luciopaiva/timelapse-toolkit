@@ -107,7 +107,7 @@ This scripts copies the last frame to the first one, moving all other frames one
 
 Calculates how much time was spent doing the art. Needs files to be prefixed with zeros, otherwise they will be incorrectly sorted.
 
-For it to work properly, snapshots have to be taken regularly. The scripts orders snapshots by their sequence numbers and considers gaps of up to 5 min between snapshots as work being done. Conversely, if the gap between two snapshots is greater than 5 min, that time is not counted (the script considers the work was paused).
+For it to work properly, snapshots have to be taken regularly. The script orders snapshots by their sequence numbers and considers gaps of up to 5 min between snapshots as work done. Conversely, if the gap between two snapshots is greater than 5 min, that time is not counted (the script considers the work was paused).
 
 ## one-every.js
 
