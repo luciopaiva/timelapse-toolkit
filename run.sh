@@ -1,3 +1,5 @@
+# Windows WSL2 instructions: run `nvm use` on the root folder and then `./run.sh <path>`, like so:
+# ./run.sh "/mnt/c/Users/myuser/My art folder with spaces/myart/timelapse/"
 
 if [ -z "$1" ]; then
   echo "Missing path argument"
@@ -9,11 +11,13 @@ if [ ! -d "$1" ]; then
   exit 1
 fi
 
-node prefix-with-zeros "${$1}"
-node drop-duplicates "${$1}"
-node fix-holes "${$1}"
-node one-every "${$1}" 3
-node fix-holes "${$1}"
-node elapsed "${$1}"
-node repeat-last "${$1}" 30
-node cover "${$1}"
+DIR=$1
+
+node prefix-with-zeros "${DIR}"
+node drop-duplicates "${DIR}"
+node fix-holes "${DIR}"
+node one-every "${DIR}" 4
+node fix-holes "${DIR}"
+node elapsed "${DIR}"
+node repeat-last "${DIR}" 30
+node cover "${DIR}"
